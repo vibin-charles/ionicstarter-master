@@ -1,0 +1,7 @@
+{
+  "name": "rishiIonic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
