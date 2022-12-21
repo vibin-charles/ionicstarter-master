@@ -9,6 +9,7 @@ import {
 	IonTitle,
 	IonToolbar,
 	IonItem,
+	IonSelect,
 } from "@ionic/react";
 import { menuOutline, arrowBackOutline, locateOutline } from "ionicons/icons";
 import Sidebar from "../components/SideBar";
@@ -24,32 +25,58 @@ const Home: React.FC = () => {
 					</IonTitle>
 				</IonToolbar>
 			</IonHeader>
-			<IonContent fullscreen>
+			<IonContent fullscreen color={"dark"}>
 				<IonGrid className="toolbarIon" color="bg-dark">
 					<IonRow>
 						<IonCol className="toolbarIon" size="8">
-							<IonToolbar>
-								<IonGrid>
-									<IonRow>
-										<IonCol size="2">
-											<IonIcon
-												className="ion-padding-right"
-												icon={arrowBackOutline}
-											></IonIcon>
-											Block 1
-										</IonCol>
-										<IonCol size="3" color="dark">
-											{" "}
-											Activity piling
-										</IonCol>
-										<IonCol size="5" style={{ color: "orange" }}>
-											80%
-										</IonCol>
-									</IonRow>
-								</IonGrid>
-							</IonToolbar>
+							<IonGrid style={{ padding: "0px" }}>
+								<IonRow style={{ padding: "0px" }}>
+									<IonCol
+										size="2"
+										style={{
+											backgroundColor: "black",
+											color: "white",
+											margin: "0px",
+											padding: "10px",
+										}}
+									>
+										<IonIcon
+											className="ion-padding-right"
+											icon={arrowBackOutline}
+										></IonIcon>
+										Block 1
+									</IonCol>
+									<IonCol
+										style={{
+											backgroundColor: "white",
+											borderRight: "1px solid black",
+										}}
+										size="4"
+									>
+										<IonSelect
+											style={{ color: "black" }}
+											placeholder="Activity Pilling"
+										/>
+									</IonCol>
+									<IonCol
+										size="6"
+										style={{
+											backgroundColor: "white",
+											color: "orange",
+											fontSize: "30px",
+											fontWeight: "900",
+										}}
+									>
+										80%
+									</IonCol>
+								</IonRow>
+							</IonGrid>
 						</IonCol>
-						<IonCol className="toolbarIon" size="4" style={{ height: "100vh" }}>
+						<IonCol
+							className="toolbarIon"
+							size="4"
+							style={{ backgroundColor: "white", height: "100vh" }}
+						>
 							<Sidebar />
 						</IonCol>
 					</IonRow>
